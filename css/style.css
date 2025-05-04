@@ -9721,6 +9721,12 @@ textarea.form-control {
   transform: translateY(-5px);  /* Move div slightly up */
 }
 
+.hl2-box:hover {
+  margin-top: 5px;
+  box-shadow: 0 0 1px #ffbd39;
+  transform: translateY(-5px);
+}
+
 @-webkit-keyframes loader-rotate {
   100% {
     -webkit-transform: rotate(360deg);
