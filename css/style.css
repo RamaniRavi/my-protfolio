@@ -8197,9 +8197,6 @@ h1, h2, h3, h4, h5,
     .ftco-navbar-light .navbar-nav {
       padding-bottom: 20px;
       margin-right: 0; } }
-  .ftco-navbar-light .navbar-nav {
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap; }
   .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
     font-size: 16px;
     padding-top: .7rem;
@@ -10386,4 +10383,77 @@ textarea.form-control {
 /* Wrapper needs position relative for owl-nav absolute positioning */
 #testimonials-section .col-md-9 {
   position: relative;
+}
+
+/* ===== Experience & Education: Mobile layout fixes (max 767px) ===== */
+@media (max-width: 767.98px) {
+
+  /* Stack the left (logo/date) and right (info) columns vertically */
+  #experience-section .resume-wrap.d-flex,
+  #education-section .resume-wrap.d-flex {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+    padding: 20px 16px;
+  }
+
+  /* Remove fixed min-width and right margin from the logo/date column */
+  #experience-section .resume-wrap.d-flex > div:first-child,
+  #education-section .resume-wrap.d-flex > div:first-child {
+    min-width: unset !important;
+    width: 100%;
+    margin-right: 0 !important;
+    margin-bottom: 14px;
+  }
+
+  /* Let logo images breathe */
+  #experience-section .resume-wrap img,
+  #education-section .resume-wrap img {
+    height: 40px !important;
+  }
+
+  /* Make the right-side content full-width and left-aligned */
+  #experience-section .resume-wrap.d-flex > div:last-child,
+  #education-section .resume-wrap.d-flex > div:last-child {
+    width: 100%;
+    text-align: left;
+  }
+
+  /* Tighten headings */
+  #experience-section .resume-wrap h4,
+  #education-section .resume-wrap h4 {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  #experience-section .resume-wrap h6,
+  #education-section .resume-wrap h6 {
+    font-size: 0.82rem;
+    margin-bottom: 10px !important;
+  }
+
+  /* Bullet list: reduce padding so it doesn't overflow */
+  #experience-section .resume-wrap ul,
+  #education-section .resume-wrap ul {
+    padding-left: 16px !important;
+  }
+
+  /* Hide the vertical arrows on mobile — they look broken */
+  #experience-section .arrow-separator,
+  #education-section .arrow-separator {
+    display: none !important;
+  }
+
+  /* Add a simple divider between cards instead */
+  #experience-section .resume-wrap + .arrow-separator + .resume-wrap,
+  #experience-section .resume-wrap.d-flex {
+    margin-bottom: 16px !important;
+  }
+
+  /* GTU CGPA inline layout: stack it under the university name */
+  #education-section .resume-wrap div[style*="display: flex"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 2px;
+  }
 }
