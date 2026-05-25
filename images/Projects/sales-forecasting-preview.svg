@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <!-- Dark GitHub-like background -->
+  <rect width="800" height="400" fill="#0d1117"/>
+
+  <!-- Top bar -->
+  <rect width="800" height="48" fill="#161b22"/>
+  <text x="22" y="31" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#f0f6fc">AI Sales Forecasting Pipeline</text>
+  <rect x="582" y="13" width="90" height="22" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="627" y="28" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#8b949e">2025 – Q1 2026</text>
+  <rect x="684" y="13" width="90" height="22" rx="4" fill="#238636"/>
+  <text x="729" y="28" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="600" fill="white">Run Pipeline</text>
+
+  <!-- Metric cards -->
+  <rect x="22" y="62" width="172" height="62" rx="5" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="108" y="83" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#8b949e">RMSE (Sales $)</text>
+  <text x="108" y="110" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="bold" fill="#58a6ff">$2,418</text>
+
+  <rect x="206" y="62" width="172" height="62" rx="5" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="292" y="83" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#8b949e">MAPE</text>
+  <text x="292" y="110" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="bold" fill="#3fb950">3.2%</text>
+
+  <rect x="390" y="62" width="172" height="62" rx="5" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="476" y="83" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#8b949e">R² Score</text>
+  <text x="476" y="110" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="bold" fill="#f78166">0.941</text>
+
+  <rect x="574" y="62" width="202" height="62" rx="5" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="675" y="83" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#8b949e">Forecast Horizon</text>
+  <text x="675" y="110" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="bold" fill="#d2a8ff">90 days</text>
+
+  <!-- Chart container -->
+  <rect x="22" y="138" width="756" height="188" rx="5" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="40" y="160" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f0f6fc">Monthly Sales vs Forecast</text>
+  <!-- Legend -->
+  <line x1="510" y1="156" x2="530" y2="156" stroke="#58a6ff" stroke-width="2.5"/>
+  <text x="535" y="161" font-family="Arial,sans-serif" font-size="10" fill="#8b949e">Actual</text>
+  <line x1="580" y1="156" x2="600" y2="156" stroke="#f78166" stroke-width="2.5" stroke-dasharray="5,3"/>
+  <text x="605" y="161" font-family="Arial,sans-serif" font-size="10" fill="#8b949e">Forecast</text>
+  <rect x="652" y="150" width="12" height="12" rx="2" fill="#f78166" fill-opacity="0.18"/>
+  <text x="669" y="161" font-family="Arial,sans-serif" font-size="10" fill="#8b949e">95% CI</text>
+
+  <!-- Y-axis labels -->
+  <text x="36" y="183" text-anchor="end" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">80K</text>
+  <text x="36" y="208" text-anchor="end" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">60K</text>
+  <text x="36" y="233" text-anchor="end" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">40K</text>
+  <text x="36" y="258" text-anchor="end" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">20K</text>
+  <text x="36" y="283" text-anchor="end" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">0</text>
+
+  <!-- Horizontal grid lines -->
+  <line x1="40" y1="180" x2="768" y2="180" stroke="#21262d" stroke-width="1"/>
+  <line x1="40" y1="205" x2="768" y2="205" stroke="#21262d" stroke-width="1"/>
+  <line x1="40" y1="230" x2="768" y2="230" stroke="#21262d" stroke-width="1"/>
+  <line x1="40" y1="255" x2="768" y2="255" stroke="#21262d" stroke-width="1"/>
+  <line x1="40" y1="280" x2="768" y2="280" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Confidence interval fill (forecast region only) -->
+  <path d="M 588,218 L 628,208 L 668,198 L 720,188 L 760,178
+           L 760,254 L 720,242 L 668,234 L 628,240 L 588,248 Z"
+        fill="#f78166" fill-opacity="0.12"/>
+
+  <!-- Actual sales line (12 historical data points) -->
+  <polyline points="52,264 99,258 147,244 195,251 244,233 292,226 340,238 388,220 437,229 485,213 534,223 582,209 588,207"
+            fill="none" stroke="#58a6ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Forecast line (dashed) -->
+  <polyline points="588,207 628,199 668,191 720,183 760,175"
+            fill="none" stroke="#f78166" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7,3"/>
+
+  <!-- Actual data dots -->
+  <circle cx="52"  cy="264" r="3" fill="#58a6ff"/>
+  <circle cx="99"  cy="258" r="3" fill="#58a6ff"/>
+  <circle cx="147" cy="244" r="3" fill="#58a6ff"/>
+  <circle cx="195" cy="251" r="3" fill="#58a6ff"/>
+  <circle cx="244" cy="233" r="3" fill="#58a6ff"/>
+  <circle cx="292" cy="226" r="3" fill="#58a6ff"/>
+  <circle cx="340" cy="238" r="3" fill="#58a6ff"/>
+  <circle cx="388" cy="220" r="3" fill="#58a6ff"/>
+  <circle cx="437" cy="229" r="3" fill="#58a6ff"/>
+  <circle cx="485" cy="213" r="3" fill="#58a6ff"/>
+  <circle cx="534" cy="223" r="3" fill="#58a6ff"/>
+  <circle cx="582" cy="209" r="3" fill="#58a6ff"/>
+  <!-- Transition point (actual→forecast) -->
+  <circle cx="588" cy="207" r="5" fill="#f0f6fc" stroke="#f78166" stroke-width="2"/>
+
+  <!-- Forecast boundary line -->
+  <line x1="588" y1="168" x2="588" y2="288" stroke="#30363d" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="595" y="178" font-family="Arial,sans-serif" font-size="9" fill="#8b949e">Forecast →</text>
+
+  <!-- X-axis labels -->
+  <text x="52"  y="296" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">Jan '25</text>
+  <text x="147" y="296" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">Mar</text>
+  <text x="244" y="296" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">May</text>
+  <text x="340" y="296" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">Jul</text>
+  <text x="437" y="296" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">Sep</text>
+  <text x="534" y="296" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">Nov</text>
+  <text x="628" y="296" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#f78166">Jan '26</text>
+  <text x="720" y="296" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#f78166">Mar '26</text>
+
+  <!-- Model badges row -->
+  <rect x="40" y="308" width="706" height="12" rx="3" fill="#1c2128"/>
+  <text x="52" y="318" font-family="Arial,sans-serif" font-size="8" font-weight="bold" fill="#6b7280">Models:</text>
+  <rect x="96" y="306" width="72" height="14" rx="3" fill="rgba(88,166,255,0.15)"/>
+  <text x="132" y="317" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#58a6ff">ARIMA(2,1,2)</text>
+  <rect x="175" y="306" width="92" height="14" rx="3" fill="rgba(88,166,255,0.15)"/>
+  <text x="221" y="317" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#58a6ff">Facebook Prophet</text>
+  <rect x="274" y="306" width="80" height="14" rx="3" fill="rgba(88,166,255,0.15)"/>
+  <text x="314" y="317" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#58a6ff">LightGBM Reg.</text>
+  <rect x="362" y="306" width="88" height="14" rx="3" fill="rgba(63,185,80,0.2)"/>
+  <text x="406" y="317" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#3fb950">Ensemble (Best)</text>
+
+  <!-- Pipeline steps section -->
+  <rect x="22" y="336" width="756" height="52" rx="5" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="40" y="354" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#f0f6fc">Data Pipeline</text>
+  <rect x="40"  y="360" width="100" height="20" rx="4" fill="rgba(31,111,235,0.22)"/>
+  <text x="90"  y="374" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#58a6ff">Data Ingestion</text>
+  <text x="144" y="374" font-family="Arial,sans-serif" font-size="12" fill="#30363d">&#8250;</text>
+  <rect x="152" y="360" width="100" height="20" rx="4" fill="rgba(31,111,235,0.22)"/>
+  <text x="202" y="374" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#58a6ff">Preprocessing</text>
+  <text x="256" y="374" font-family="Arial,sans-serif" font-size="12" fill="#30363d">&#8250;</text>
+  <rect x="264" y="360" width="116" height="20" rx="4" fill="rgba(31,111,235,0.22)"/>
+  <text x="322" y="374" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#58a6ff">Feature Engineering</text>
+  <text x="384" y="374" font-family="Arial,sans-serif" font-size="12" fill="#30363d">&#8250;</text>
+  <rect x="392" y="360" width="110" height="20" rx="4" fill="rgba(31,111,235,0.22)"/>
+  <text x="447" y="374" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#58a6ff">ARIMA / Prophet</text>
+  <text x="506" y="374" font-family="Arial,sans-serif" font-size="12" fill="#30363d">&#8250;</text>
+  <rect x="514" y="360" width="80" height="20" rx="4" fill="rgba(31,111,235,0.22)"/>
+  <text x="554" y="374" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#58a6ff">Ensemble</text>
+  <text x="598" y="374" font-family="Arial,sans-serif" font-size="12" fill="#30363d">&#8250;</text>
+  <rect x="606" y="360" width="104" height="20" rx="4" fill="rgba(35,134,54,0.28)"/>
+  <text x="658" y="374" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#3fb950">Forecast Output</text>
+  <text x="40" y="384" font-family="Arial,sans-serif" font-size="8" fill="#484f58">Python 3.11 · pandas · statsmodels · prophet · lightgbm · scikit-learn · matplotlib</text>
+</svg>
